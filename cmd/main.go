@@ -22,25 +22,17 @@ func main() {
 	if err != nil {
 		fmt.Printf("%#v\n", err)
 	}
-	//fmt.Printf("%#v\n", lines[0])
 
 	b := NewStructBuilder()
 
 	// 構造体フィールドを生成する
 	for _, v := range lines[0] {
-		//fmt.Printf("%#v\n", v)
 		b.AddField(v, reflect.TypeOf(""))
 	}
 
 	header := lines[0]
-	fmt.Printf("%#v\n", header)
-	fmt.Println(len(header))
-
-	fmt.Println("-------------------")
-	fmt.Printf("%#v\n", b.field[0].Name)
-	fmt.Printf("%#v\n", b.field[1].Name)
-	fmt.Printf("%#v\n", b.field[2].Name)
-	fmt.Println("-------------------")
+	fmt.Printf("ヘッダ行: %#v\n", header)
+	fmt.Printf("ヘッダ行要素数: %d\n ", len(header))
 
 	// NOTE: example : 型情報を分析 設定する値はなんでもよい
 	//b.AddField("Name", reflect.TypeOf("")) // <- string
@@ -67,6 +59,7 @@ func main() {
 	//fmt.Println(i.Value())   //  値渡し
 	//fmt.Println(i.Pointer()) //  ポインタ渡し
 
+	fmt.Println("---")
 	fmt.Printf("%#v\n", res) // 構造体出力
 }
 
