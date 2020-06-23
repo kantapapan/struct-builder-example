@@ -20,8 +20,8 @@ go run cmd/main.go
     ヘッダ行要素数: 3
      ---
     []interface {}{
-        struct { FullName string; NickName string; Description string } { FullName: "安倍晋三", NickName: "漆黒", Description: "とんでもない" }, 
-        struct { FullName string; NickName string; Description string }{FullName: "竹中平蔵", NickName: "売国奴", Description: "とんでもない"
+        struct { FullName string; NickName string; Description string } { FullName: "ABE", NickName: "漆黒", Description: "とんでもない" }, 
+        struct { FullName string; NickName string; Description string }{FullName: "TAKENAKA", NickName: "売国奴", Description: "とんでもない"
     }
 ```
 
