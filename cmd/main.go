@@ -26,11 +26,11 @@ func main() {
 	b := NewStructBuilder()
 
 	// 構造体フィールドを生成する
-	for _, v := range lines[0] {
+	header := lines[0]
+	for _, v := range header {
 		b.AddField(v, reflect.TypeOf(""))
 	}
 
-	header := lines[0]
 	fmt.Printf("ヘッダ行: %#v\n", header)
 	fmt.Printf("ヘッダ行要素数: %d\n ", len(header))
 
